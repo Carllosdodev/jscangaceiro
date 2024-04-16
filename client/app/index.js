@@ -27,6 +27,22 @@ document.querySelector('.form').addEventListener('submit', function(event){
         // adicionar a td na tr
         tr.appendChild(td);
     });
+
+    var tdVolume = document.createElement('td');
+    tdVolume.textContent = campos[1].value * campos[2].value;
+    tr.appendChild(tdVolume);
+
+    tbody.appendChild(tr);
+
+
+    // limpa o campo data
+    campos[].value = '';
+    // limpa campo quantidade
+    campos[].value = 1;
+    // limpa valor
+    campos[].value = 0;
+    // foca no campo data
+    campos[].focus();
 });
 
 // nova td que armazenará o volume da negociação
